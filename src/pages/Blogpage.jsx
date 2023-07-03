@@ -1,6 +1,38 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { BlogFilter } from '../components/BlogFilter';
+import BlogImage from './153.jpg';
+
+const Button = ({ children, size, ...props}) => {
+    if (size === "jumbo") { return 'asd'}
+
+    return (
+        <button size={size} {...props}>
+            {children}
+        </button>
+    );
+};
+
+const Button2 = ({ children, size, ...props}) => {
+    if (size === "jumbo") { return 'asd'}
+
+    return (
+        <button size={size} {...props}>
+            {children}
+        </button>
+    );
+};
+
+const Button3 = ({ children, size, ...props}) => {
+    if (size === "jumbo") { return 'asd'}
+
+    return (
+        <button size={size} {...props}>
+            {children}
+        </button>
+    );
+};
+
 
 const Blogpage = () => {
     const [posts, setPosts] = useState([]);
@@ -20,6 +52,8 @@ const Blogpage = () => {
     return (
         <div>
             <h1>Blog</h1>
+
+            <img src={BlogImage} height={200} width={200}/>
             
             <BlogFilter postQuery={postQuery} latest={latest} setSearchParams={setSearchParams} />
 
